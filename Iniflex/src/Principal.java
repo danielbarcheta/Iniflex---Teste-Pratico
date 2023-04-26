@@ -32,8 +32,8 @@ public class Principal {
 		funcionarios.removeIf(funcionario -> funcionario.getNome().equals("João"));
 		System.out.println("\n-->Imprimindo os funcionarios inseridos na lista<-- \n");
 
-		/*
-		 * 3.3: Imprimindo os funcionarios presentes na LinkedList no formato
+		
+		/* 3.3: Imprimindo os funcionarios presentes na LinkedList no formato
 		 * requisitado
 		 */
 		for (Funcionario valor : funcionarios) {
@@ -54,10 +54,9 @@ public class Principal {
 			System.out.println(valor);
 		}
 
-		/*
-		 * 3.5 e 3.6: Agrupando os funcionarios num Map e imprimindo-os agrupando-os por
-		 * funcao
-		 */
+		
+		/* 3.5 e 3.6: Passando os funcionarios num Map e imprimindo-os agrupando-os por funcao */
+		 
 
 		System.out.println("\n-->Imprimindo os funcionarios agrupados por Funcao<--\n");
 
@@ -93,7 +92,7 @@ public class Principal {
 
 		/* 3.9 Encontrando o funcionario que possui maior idade */
 
-		// Passo 1: Encontrar a maior idade dentre os funcionarios da LinkedList criada
+		// -> PASSO 1: Encontrar a maior idade dentre os funcionarios da LinkedList criada
 
 		int maxIdade = 0;
 		for (Funcionario F : funcionarios) {
@@ -106,7 +105,7 @@ public class Principal {
 
 		}
 
-		// Passo 2: Iterar sobre a lista para encontrar o funcionario que possui esta
+		// -> PASSO 2: Iterar sobre a lista para encontrar o funcionario que possui esta
 		// idade e printa-lo
 		Iterator<Funcionario> it = funcionarios.iterator();
 		while (it.hasNext()) {
@@ -124,12 +123,12 @@ public class Principal {
 		}
 
 		/* 3.10: Imprimindo a lista de funcionarios por ordem alfabetica */
-
+		System.out.println("\n-->Imprimindo a lista em ordem alfabetica:\n");
 		Collections.sort(funcionarios); // A classe "Pessoa" implementa o metodo compareTo atraves do nome.
 		System.out.println(funcionarios);
 
 		/* 3.11: Imprimindo o total dos salarios dos funcionarios */
-
+		System.out.println("\n-->Imprimindo a soma dos salarios dos funcionarios:\n");
 		BigDecimal totalSalario = new BigDecimal("0");
 		for (Funcionario funcionario : funcionarios) {
 			totalSalario = totalSalario.add(funcionario.getSalario());
@@ -137,10 +136,9 @@ public class Principal {
 		System.out.println("Total de salários: " + totalSalario);
 
 		
-		/* 3.12: Imprimindo quantos salarios minimos ganha cada funcionario (Considerando o aumento!).
-		 */
-
-		System.out.println("\nSalários mínimos:");
+		/* 3.12: Imprimindo quantos salarios minimos ganha cada funcionario (Considerando o aumento!). */
+		System.out.println("\nQuantos salários mínimos ganha cada funcionario:");
+		
 		for (Funcionario funcionario : funcionarios) {
 			System.out.println(funcionario.getNome() + ": " + (funcionario.getSalario()).intValue() / 1212);
 		}
