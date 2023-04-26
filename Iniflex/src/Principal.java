@@ -8,8 +8,8 @@ public class Principal {
 	public static void main(String[] args) {
 
 		/*
-		 * Para atender as requisicoes, foi utilizado uma LinkedList. Poderia se ter
-		 * implementado tambem um Arraylist
+		 * Para atender as requisicoes, foi utilizada uma LinkedList. Poderia ter sido
+		 * implementada tambem uma Arraylist
 		 */
 
 		List<Funcionario> funcionarios = new LinkedList<>();
